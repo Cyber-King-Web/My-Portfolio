@@ -1,0 +1,954 @@
+/* ======================== Css Rule ====================== */
+/* Base Rule*/
+/* Theme */
+/* Layout */
+/* Modal / Reusable*/
+/* States */
+/* ======================== Css Rule ====================== */
+
+
+/* ========================  Base Rule ======================== */
+
+
+/* @font-face {
+    font-family: "thapaFont";
+    src: url("./font/Fortune.otf") format("OpenType");
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px  */
+    scroll-behavior: smooth;
+    /* scroll-snap-type: Y proximity; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+}
+
+p,
+li,
+a,
+label {
+    font-family: "Urbanist", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color: var(--para-color);
+    line-height: 1.5;
+}
+
+p {
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+}
+
+::selection {
+    /* color: transparent; */
+    color: #fff;
+    background: #000;
+
+}
+
+/*======================== Theme ======================== */
+
+:root {
+    --main-color: #0062ff;
+    --supporting-color: #ebf3fe;
+    --font-color: #424242;
+    /* --bg-color: #ffffff; */
+    --bg-color: #f7fcff;
+    --heading-color: #000a19;
+    --hero-heading-color: #003b99;
+    --white-color: #ffffff;
+    --para-color: #504e4d;
+    --bnt-hover-bg-color: #003b99;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --footer-bg-color: #040d12;
+}
+
+/* ======================== Layout ======================== */
+
+.container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+
+}
+
+.container:first-child {
+    padding: 6.4rem 2.4rem 2.4rem 2.4rem;
+}
+
+.grid {
+    display: grid;
+
+}
+
+.grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section-about .container:first-child,
+.section-blog .container:first-child,
+.section-course .container:first-child,
+.section-choose .container:first-child,
+.section-contact .container:first-child {
+    padding: 6.4rem 0 2.4rem 0;
+}
+
+.section-contact .container:nth-child(2) {
+    padding-top: 1rem;
+}
+
+/* ======================== Modal / Reusable ======================== */
+
+.btn {
+    background: var(--main-color);
+    color: var(--white-color);
+    padding: 1.2rem 3.2rem;
+    display: inline-block;
+    border-radius: 0.6rem;
+    font-weight: 500;
+}
+
+.section-common-heading {
+    font-size: 2.5rem;
+}
+
+.section-common-subheading {
+    color: var(--heading-color);
+}
+
+.section-common--title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+}
+
+.fa-solid {
+    padding: 2.4rem;
+    background-color: var(--supporting-color);
+    font-size: 2.4rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: var(--hero-heading-color);
+}
+
+
+/* ======================== States ======================== */
+
+.btn:hover {
+    background: var(--bnt-hover-bg-color);
+    box-shadow: var(--btn-box-shadow);
+}
+
+
+
+/* ======================== Start Nav Rule ======================  */
+
+.section-header {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.section-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 2.4rem;
+
+}
+
+.section-header .container .nav-brand img {
+    width: 20rem;
+    height: auto;
+}
+
+.section-header .container .navbar ul {
+    display: flex;
+    gap: 3.2rem;
+
+    /* nasting  */
+    & li a {
+        color: var(--heading-color);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.section-header .container .navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.2rem;
+    width: 0;
+    border-bottom: 0.2rem solid var(--main-color);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.section-header .container .navbar ul li a:hover:after {
+    width: 100%;
+}
+
+/* ======================== End Nav Rule ====================== */
+
+/* ======================== Start Header ====================== */
+
+main {
+    position: relative;
+    background-image: linear-gradient(to top right,
+            #3d86fa,
+            #4484fb,
+            #679eff,
+            #b3d2ff,
+            #ebf3fe);
+}
+
+/* ===== Start Shape Divider ======*/
+
+.custom-shape-divider-bottom-1697256223 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1697256223 svg {
+    position: relative;
+    display: block;
+    width: calc(122% + 1.3px);
+    height: 94px;
+}
+
+.custom-shape-divider-bottom-1697256223 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* ===== End Shape Divider ======*/
+
+.section-hero--image img {
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+
+}
+
+.section-hero .grid {
+    align-items: center;
+    gap: 6.4rem;
+
+    & .section-hero--subheading {
+        font-size: 1.7rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        word-spacing: 0.2rem;
+        color: var(--hero-heading-color);
+    }
+
+    & .section-hero--heading {
+        color: var(--hero-heading-color);
+        font-size: 5.8rem;
+        font-weight: 900;
+        line-height: 1.5;
+        font-family: "Jost" serif;
+    }
+
+    & .section-hero--para {
+        color: var(--white-color);
+        margin: 2rem 0 4.2rem 0;
+
+    }
+}
+
+/* ======================== End Header ====================== */
+
+/* ======================== Start About ====================== */
+
+.section-about .grid {
+    gap: 6.4rem;
+}
+
+.section-about .about-div {
+    text-align: center;
+}
+
+.section-about img {
+    padding: 2.4rem;
+    width: 15rem;
+    height: auto;
+    border-radius: 50%;
+    background-color: var(--supporting-color);
+    transition: all 0.3s linear;
+}
+
+.icon:hover>img {
+    transform: rotate(360deg);
+    background-image: linear-gradient(to top right,
+            #3d86fa,
+            #4484fb,
+            #679eff,
+            #b3d2ff,
+            #ebf3fe);
+}
+
+/* ======================== End About ====================== */
+
+/* ======================== Start Course ====================== */
+
+.section-course {
+    background-color: var(--bg-color);
+}
+
+.section-course .grid {
+    gap: 3.2rem;
+}
+
+.section-course .course-div {
+    padding: 3.2rem;
+}
+
+.section-course .course-div:hover {
+    box-shadow: var(--btn-box-shadow);
+}
+
+.section-course p {
+    font-size: 1.5rem;
+}
+
+.course-div:nth-child(2) .icon .fa-solid {
+    color: #68bf9b;
+    background-color: #e7f6ef;
+}
+
+.course-div:nth-child(3) .icon .fa-solid {
+    color: #ff8b52;
+    background-color: #fbebe8;
+}
+
+.course-div:nth-child(4) .icon .fa-solid {
+    color: #183d3d;
+    background-color: #ccf7f7;
+}
+
+.course-div:nth-child(5) .icon .fa-solid {
+    color: #d988b9;
+    background-color: rgb(247, 223, 238);
+}
+
+.course-div:nth-child(6) .icon .fa-solid {
+    color: #ff9b50;
+    background-color: #f6dfce;
+}
+
+.course-div:nth-child(7) .icon .fa-solid {
+    color: #1450a3;
+    background-color: #dce9fa;
+}
+
+/* ======================== End Course ====================== */
+
+/* ======================== Start Choose Section ====================== */
+
+.section-choose .grid {
+    gap: 9.6rem;
+}
+
+.why-choose--div {
+    margin-top: 3.2rem;
+}
+
+.section-choose .text-align--right .why-choose--div {
+    /* text-align: right; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    text-align: right;
+}
+
+.common-text--highlight {
+    width: 6rem;
+    height: 6rem;
+    background: var(--supporting-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: "Poppins" sans-serif;
+}
+
+.section-choose .why-choose--div p:last-child {
+    font-size: 1.6rem;
+}
+
+.choose-center--div img {
+    width: 90%;
+    height: auto;
+}
+
+.choose-center--div,
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.choose-center--div figure:before,
+.choose-center--div figure::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: var(--main-color);
+    width: 45rem;
+    /*aspect-ratio: 1;
+  */
+    height: 45rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: -1;
+}
+
+.choose-center--div figure::before {
+    animation: circle 5s linear infinite;
+    -webkit-animation: circle 5s linear infinite;
+}
+
+@keyframes circle {
+    0% {
+        background-color: #b3d0ff;
+    }
+
+    25% {
+        background-color: #80b1ff;
+    }
+
+    50% {
+        background-color: #4d91ff;
+    }
+
+    75% {
+        background-color: #99c0ff;
+    }
+
+    100% {
+        background-color: #3381ff;
+    }
+}
+
+.choose-center--div figure::after {
+    width: 50rem;
+    height: 50rem;
+    background-color: transparent;
+    z-index: -2;
+    border: 0.5rem solid var(--supporting-color);
+}
+
+/* ======================== Start Choose Section ====================== */
+
+/* ======================== Start home contact Section ====================== */
+
+.home-contact--div {
+    width: 60%;
+    height: 30rem;
+    margin: auto;
+    background: var(--white-color);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+    padding: 0 3.2rem;
+    position: relative;
+    bottom: -15rem;
+    z-index: 1;
+
+}
+
+.home--contact .grid {
+    place-items: center;
+    gap: 6.4rem;
+}
+
+.home--contact .home-contact--content .contact--head {
+    font-size: 3rem;
+    color: var(--heading-color);
+}
+
+.home--contact .home-contact--content p {
+    padding: 1.5rem 0 3rem 0;
+
+}
+
+.home--contact .home-contact--content .fa-solid {
+    background-color: var(--white-color);
+    padding: 0.3rem;
+    font-size: 1.5rem;
+
+}
+
+.home-contact--div .home-contact--image img {
+    width: 80%;
+    height: auto;
+}
+
+/* ======================== End home contact Section ====================== */
+
+/* ======================== Start Contact Section ====================== */
+
+.section-contact .grid {
+    gap: 6.4rem;
+    align-items: center;
+}
+
+.section-contact .contact--div label {
+    display: block;
+    /* font-size: 2rem; */
+    /* color: var(--heading-color); */
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.section-contact .contact--div input {
+    width: 100%;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+}
+
+.section-contact .contact--div textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.section-contact .contact--div input[type="email"] {
+    text-transform: lowercase;
+}
+
+.section-contact .contact--div div {
+    margin-top: 3rem;
+}
+
+.section-contact .contact--div .grid {
+    gap: 6.4rem;
+}
+
+.section-contact .contact--div .btn-submit {
+    border: 0;
+    outline: 0;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.section-contact .contact--div input:focus {
+    outline: 0.2rem solid var(--hero-heading-color);
+}
+
+.section-contact .contact--div textarea:focus {
+    outline: 0.2rem solid var(--hero-heading-color);
+}
+
+::placeholder {
+    color: var(--hero-heading-color);
+}
+
+
+/* ======================== End contact Section ====================== */
+
+/* ======================== Statr Blog Section ====================== */
+
+.section-blog {
+    background: var(--bg-color);
+
+}
+
+.section-blog .grid {
+    gap: 6.4rem;
+
+}
+
+.section-blog .blog--div {
+    box-shadow: var(--btn-box-shadow);
+    transition: scale 0.3s linear;
+    -webkit-transition: scale 0.3s linear;
+    -moz-transition: scale 0.3s linear;
+    -ms-transition: scale 0.3s linear;
+    -o-transition: scale 0.3s linear;
+}
+
+.section-blog .blog--div:hover {
+    scale: 1.1;
+}
+
+.section-blog .blog--div img {
+    width: 100%;
+    height: auto;
+}
+
+.section-blog .blog--div .blog-content {
+    padding: 1.4rem 2.4rem 2.4rem;
+}
+
+.section-blog .blog--div .blog-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+}
+
+.section-blog .blog--div .blog-date .fa-solid {
+    background-color: transparent;
+    padding: 0;
+}
+
+.section-blog .blog--div .section-common--title {
+    margin-top: 0.8rem;
+}
+
+
+
+
+
+/* ======================== End Bolg Section ====================== */
+
+/* ======================== start footer Section ====================== */
+footer * {
+    color: var(--white-color);
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    padding-top: 15rem;
+}
+
+footer .grid {
+    place-items: center;
+    gap: 6.4rem;
+    text-align: center;
+}
+
+.footer--heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.footer--contant p {
+    font-size: 1.5rem;
+    padding: 1.5rem 0 3rem 0;
+}
+
+.social--link {
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social--link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    background: var(--supporting-color);
+    border-radius: 50%;
+    transition: all .3s linear;
+}
+
+.social--link a:hover {
+    background: var(--hero-heading-color);
+
+}
+
+.social--link a:hover i {
+    transform: rotate(360deg);
+    color: var(--white-color);
+}
+
+.social--link i {
+    font-size: 3rem;
+    color: var(--hero-heading-color);
+    transition: all .3s linear;
+}
+
+.links ul li a {
+    text-transform: capitalize;
+}
+
+.links ul li a:hover {
+    font-weight: bold;
+}
+
+/* ======================== End footer Section ====================== */
+
+
+/* ======================== Start Scroll Bar ====================== */
+
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--supporting-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--heading-color);
+}
+
+/* ======================== End Scroll Bar ====================== */
+
+/* ======================== End Scroll Bar ====================== */
+
+@media (width <=1400px) {
+    html {
+        font-size: 56.25%;
+        /* 1rem = 9px  */
+    }
+
+    .section-hero img {
+        width: 70%;
+    }
+}
+
+@media (width <=1220px) {
+    html {
+        font-size: 54%;
+        /* 1rem = 9px  */
+    }
+
+    :is(.section-about,
+        .section-blog,
+        .section-course,
+        .home--contact,
+        .section-choose) .grid {
+        gap: 6.4rem;
+    }
+}
+
+@media (width <=1100px) {
+    :is(.section-course, .section-blog) .grid-four--cols {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .section-choose {
+        & .choose-left--div {
+            order: 2;
+        }
+
+        & .choose-right--div {
+            order: 3;
+        }
+
+        & .choose-center--div {
+            order: 1;
+
+            & img {
+                width: 50%;
+            }
+
+            & figure::before {
+                width: 0;
+                height: 0;
+                background-color: transparent;
+                padding: 0;
+            }
+
+            & figure::after {
+                width: 0;
+                height: 0;
+                background-color: transparent;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (width <=998px) {
+    .section-hero {
+        height: auto;
+        padding-bottom: 5rem;
+
+        & .grid-two--cols {
+            grid-template-columns: 1fr;
+
+            & .section-hero--content {
+                order: 2;
+            }
+
+            & .section-hero--image {
+                order: 1;
+
+                & img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+
+
+    .section-about .about-div {
+        text-align: left;
+    }
+
+    footer .grid-four--cols {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        text-align: left;
+
+        & .footer--contant {
+            grid-row: 2 / 3;
+            grid-column: 1 / -1;
+            margin-top: 6.4rem;
+        }
+    }
+}
+
+@media (width <=768px) {
+
+    .btnhome {
+        display: none;
+    }
+
+    .contact--img {
+        opacity: 0;
+    }
+
+    .grid-two--cols,
+    .grid-three--cols {
+        grid-template-columns: 1fr;
+    }
+
+
+
+    .section-navbar .container {
+        display: flex;
+        flex-direction: column;
+
+        & .navbar ul {
+            gap: 2.4rem;
+        }
+
+        & .navbar-brand {
+            text-align: center;
+            margin-bottom: 2.4rem;
+        }
+
+        .section-hero .grid .hero-heading {
+            font-size: 3.8rem;
+        }
+
+        .section-why--choose {
+            & img {
+                width: 30%;
+            }
+
+            & .grid {
+                gap: 1.4rem;
+            }
+
+            & .text-align--right .why-choose--div {
+                align-items: start;
+                text-align: left;
+            }
+        }
+
+        .home--contact .btn {
+            display: block;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2.4rem;
+        }
+
+
+        :is(.home--contact) .container:first-child {
+            padding: 6.4rem 0rem 2.4rem 0rem;
+        }
+
+        .section-choose .text-align--right .why-choose--div {
+            /* text-align: right; */
+            justify-content: end;
+            align-items: start;
+            text-align: left;
+        }
+
+    }
+
+    /* ======================== End Scroll Bar ====================== */
